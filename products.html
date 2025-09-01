@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./product_style.css"> -->
+    <!--adding fav icon-->
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    <title>Alpha | Product Page</title>
+    
+    <style>
+        .product-section{
+            margin: 70px;
+        }
+
+        .product-card{
+            margin: 20px;
+            padding: 20px;
+            border-radius: 3%;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        img{
+            padding: 30px;
+            margin: auto;
+            width: 600px;
+            height: auto;
+        }
+
+        /* Navbar Styling */
+        nav {
+    /* Fixed position at the top */
+            
+            width: auto;
+            background-color: rgb(29, 28, 28);
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        /* Product Styles */
+        
+/* Product Grid Styles */
+.product-grid {
+    display: flex;
+    gap: 20px;
+    margin: 20px;
+}
+
+.product-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.product-card img {
+    max-width: 50%;
+    height: auto;
+    transition: transfrom 0.3 ease-in-out;
+}
+
+.product-card img:hover{
+    transform:scale(1.2);
+}
+
+
+/* Product-description */
+.product-details{
+    display: flex;
+    margin: 50px;
+    padding: 5% 10%;
+    gap:70px;
+    justify-content: center;
+    align-items: center;
+    border-style: groove;
+}
+.product-image img{
+    width: 300px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.product-image img:hover{
+    transform: scale(1.2); /* Increase the scale to zoom in (1.2 means 120% of the original size) */
+
+}
+
+
+
+.close-button:hover{
+    color: red;
+}
+
+        /* Logo styles */
+        
+/* Navigation Bar styles */
+nav {
+    /* Fixed position at the top */
+    
+    width: auto;
+    background-color: rgb(29, 28, 28);
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Logo styles */
+.logo {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+    /* Navbar Styling */
+nav {
+            background-color: #333;
+            overflow: hidden;
+            border-bottom: 2px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            width: auto;
+            height:auto;
+            width: auto;
+        }
+
+        .logo {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        nav a {
+            color: white;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-container input[type=text] {
+            padding: 8px;
+            font-size: 14px;
+            border: none;
+            border-radius: 20px; /* Curvy edges for the search box */
+        }
+
+        .search-container button {
+            padding: 10px;
+            background-color: #333; /* Green color for the circular button */
+            border: none;
+            border-radius: 50%; /* Circular button */
+            color: white;
+            cursor: pointer;
+        }
+
+        .search-container button:hover {
+            background-color: black; /* Darker green on hover */
+        }
+        /* Navbar CSS ~Subhan, ends here  */
+        /* Footer Styling*/
+         
+    /* Footer styles */
+    .footer {
+        background-color: rgb(29, 28, 28);
+        color: white;
+        padding: 20px 0;
+        margin-top: 3%;
+    }
+
+    /* Footer links styles */
+    .footer-links {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-left: 30px;
+    }
+
+    /* Footer column styles */
+    .footer-col {
+        flex: 1;
+        margin-bottom: 20px;
+        line-height: 1.7;
+    }
+
+    /* Footer column header styles */
+    .footer-col h4 {
+        font-size: 22px;
+    }
+
+    /* Footer column unordered list styles */
+    .footer-col ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    /* Footer column anchor styles */
+    .footer-col a {
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+    }
+
+    /* Social icons styles */
+    .social-icons {
+        position: relative;
+        right: 8%;
+        margin: 0 -10%;
+    }
+
+    /* Social icons image styles */
+    .social-icons img {
+        width: 50px;
+        height: auto;
+        filter: brightness(100%);
+    }
+
+    /* Footer bottom styles */
+    .footer-bottom {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    /* Designer styles */
+    .designer {
+        opacity: 0.7;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 400;
+    }
+
+    </style>
+
+</head>
+
+<body>
+    
+
+     <!-- Navbar Starts here -->
+     <nav>
+        <div class="logo">
+            <a href="#">Alpha Printer Store</a>
+        </div>
+
+        <div class="search-container">
+            <input type="text" placeholder="Search...">
+            <button type="submit">&#128269;</button>
+        </div>
+
+        <div>
+            <a href="./index.html">Home</a>
+            <a href="./products.html">Products</a>
+            <a href="./blog.html">Blog</a>
+            <a href="./research.html">Research</a>
+            <a href="./aboutUs">About us</a>
+            <a href="./contact.html">Contact</a>
+        </div>
+    </nav>
+<!-- Navbar Ends Here  ~ Subhan-->
+
+    <!-- Product Grid Section -->
+    <div class="product-section">
+        <section class="product-grid">
+            <!-- Row 1 -->
+                <div class="product-card">
+                    <img src="./img/product-1.png" alt="Product 1">
+                    <h3>Canon PIXMA E3370</h3>
+                    <p><span style="font-weight:lighter;text-decoration: line-through; font-size: medium;">रु 18,000 </span><b>रु 12,000</b> </p>
+                    <a href="./product-1.html" style="text-decoration: none;color: black;cursor: pointer;" >
+                        
+                        <button>View more</button>
+                    </a>                   
+                </div>
+    
+            <div class="product-card">
+                <img src="./img/product-2.png" alt="Product 2">
+                <h3>Canon PIXMA G4770</h3>
+                <p><b>रु 15,000</b></p>
+                
+                <a href="./product-2.html" style="text-decoration: none;color: black;cursor: pointer;" >
+                        <button>View more</button>
+                    </a>            </div>
+    
+            <div class="product-card">
+                <img src="./img/product-3.png" alt="Product 3">
+                <h3>Brother HL-L3280CDW</h3>
+                <p><b>रु 18,000</b></p>
+                <a href="./product-3.html" style="text-decoration: none;color: black;cursor: pointer;" >
+                        <button>View more</button>
+                    </a>            </div>
+
+        </section>
+
+        <section class="product-grid">
+            <!-- Row 2 -->
+            <div class="product-card">
+                <img src="./img/product-4.png" alt="Product 4">
+                <h3>HP OfficeJet 8015e</h3>
+                <p><b>रु 38,000</b></p>
+                <a href="./product-4.html" style="text-decoration: none;color: black;cursor: pointer;" >
+                        <button>View more</button>
+                    </a>            </div>
+    
+            <div class="product-card">
+                <img src="./img/product-5.png" alt="Product 5">
+                <h3>Canon® PIXMA™ TR150</h3>
+                <p><b>रु 67,990</b></p>
+                <a href="./product-5.html" style="text-decoration: none;color: black;cursor: pointer;" >
+                        <button>View more</button>
+                    </a>            </div>
+    
+            <div class="product-card">
+                <img src="./img/product-6.png" alt="Product 6">
+                <h3>Brother Printer HLL8360CDWT</h3>
+                <p><b>रु 85,476</b></p>
+                <a href="./product-6.html" style="text-decoration: none;color: black;cursor: pointer;" >
+                        <button>View more</button>
+                    </a>            </div>
+        </section>
+
+        <section class="product-grid">
+            <!-- Row 3 -->
+            <div class="product-card">
+                <img src="./img/product-7.png" alt="Product 7">
+                <h3>3D Printer DIGGRO Alpha</h3>
+                <p><b>रु 1,07,543</b></p>
+                <a href="./product-7.html" style="text-decoration: none;color: black;cursor: pointer;" >
+                        <button>View more</button>
+                    </a>            </div>
+    
+            <div class="product-card">
+                <img src="./img/product-8.png" alt="Product 8">
+                <h3>Luqeeg MPT II</h3>
+                <p><b>रु 6,000</b></p>
+                <a href="./product-8.html" style="text-decoration: none;color: black;cursor: pointer;" >
+                        <button>View more</button>
+                    </a>            </div>
+    
+            <div class="product-card">
+                <img src="./img/product-9.png" alt="Product 9">
+                <h3>EPSON XP-15000</h3>
+                <p><b>रु 1,13,990</b></p>
+                <a href="./product-9.html" style="text-decoration: none;color: black;cursor: pointer;" >
+                        <button>View more</button>
+                    </a>            </div>
+        </section>
+    </div>
+    
+    <a href="./products.html"><h3 style="text-align: center;">Show all</h3></a>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-links">
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-col">
+                <h4>Products</h4>
+                <ul>
+                    <li><a href="#">Mini Printers</a></li>
+                    <li><a href="#">Inkjet Printers</a></li>
+                    <li><a href="#">Portable Printers</a></li>
+                    <li><a href="#">Portal Printers</a></li>
+                    <li><a href="#">3D Printers</a></li>
+                    <li><a href="#">Label Printers</a></li>
+                    <li><a href="#">Photo Printers</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-col">
+                <h4>Get Help</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Payment Options</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-col social-icons">
+                <h4 style="margin-left: 35%;">Follow Us</h4>
+                <figure>
+                    <img src="img/youtube (1).png" alt="YouTube" width="50px">
+                    <img src="img/twitter (1).png" alt="Twitter" width="50px">
+                    <img src="img/instagram.png" alt="Instagram" width="50px">
+                    <img src="img/google-plus.png" alt="Google Plus" width="50px">
+                    <img src="img/facebook.png" alt="Facebook" width="50px">
+                    <img src="img/whatsapp.png" alt="WhatsApp" width="50px">
+                </figure>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2024 Designed by <span class="designer">Team Alpha</span></p>
+        </div>
+    </footer>
+    
+</body>
+
+</html>
